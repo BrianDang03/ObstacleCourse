@@ -9,11 +9,24 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PrintInstructions();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        MovePlayer();
+    }
+
+    //Print to Concole
+    void PrintInstructions()
+    {
+        Debug.Log("Welcome to the Game!");
+        Debug.Log("Move Player with WASD or Arrow Keys!");
+        Debug.Log("Avoid the Walls!");
+    }
+
+    void MovePlayer()
     {
         //AD Inputs
         float xValue = Input.GetAxisRaw("Horizontal") * playerSpeed * Time.deltaTime;
