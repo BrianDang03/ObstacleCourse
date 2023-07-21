@@ -12,10 +12,12 @@ GameObject:
   - component: {fileID: 1563290232947681123}
   - component: {fileID: 1563290232947681124}
   - component: {fileID: 1563290232947681121}
-  - component: {fileID: 7015526496878809831}
+  - component: {fileID: 375563103}
+  - component: {fileID: 375563108}
+  - component: {fileID: 375563112}
   m_Layer: 0
   m_Name: Player (Doji)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,9 +99,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9aa6a10d33a1ff45a45e6a952517a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 7
---- !u!136 &7015526496878809831
-CapsuleCollider:
+  playerSpeed: 5
+--- !u!54 &375563103
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563290232947681126}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!65 &375563108
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,7 +126,18 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &375563112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563290232947681126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b79e145043fd6b43b1e83ae03ccf225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -8,13 +8,13 @@ public class PlayerScore : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         //If has not been hit
-        if (other.gameObject.GetComponent<MeshRenderer>().material.color != Color.red)
+        if (other.gameObject.tag != "Hit")
         {
             //Inc Player Score
             playerScore++;
-        }
 
-        //Print into concole msg
-        Debug.Log("Object Hit Wall. Your Score is " + playerScore);
+            //Print into concole msg
+            Debug.Log("You hit somthing! You have hit " + playerScore + " times");
+        }
     }
 }

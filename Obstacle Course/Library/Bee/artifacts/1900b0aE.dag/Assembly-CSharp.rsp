@@ -348,6 +348,7 @@
 "Assets/Scripts/Mover.cs"
 "Assets/Scripts/ObjectDrop.cs"
 "Assets/Scripts/ObjectHit.cs"
+"Assets/Scripts/ObjectSpin.cs"
 "Assets/Scripts/PlayerScore.cs"
 -langversion:9.0
 

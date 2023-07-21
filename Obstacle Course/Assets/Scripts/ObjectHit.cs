@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
-    //When Wall is Hit
+    MeshRenderer mr;
+
+    void Start()
+    {
+        //Assign Mesh Render
+        mr = GetComponent<MeshRenderer>();
+    }
+    //When object is Hit
     private void OnCollisionEnter(Collision other)
     {
-        //Print into concole msg
-        Debug.Log("Object Hit Wall.");
-
-        //Change the color of Wall
-        GetComponent<MeshRenderer>().material.color = Color.red;
+        //If Player Hits Object
+        if (other.gameObject.tag == "Player")
+        {
+            //Change the color of Object to red
+            mr.material.color = Color.red;
+            //Change object to hit Object
+            gameObject.tag = "Hit";
+        }
     }
 }
